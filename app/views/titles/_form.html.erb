@@ -1,0 +1,10 @@
+<% form_for(@title) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+    <%= f.text_field :title %>
+  </div>
+  <div class="actions">
+    <%= f.submit %> <%= link_to 'Cancel', titles_path %>
+  </div>
+<% end %>

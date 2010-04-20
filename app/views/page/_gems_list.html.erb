@@ -1,0 +1,6 @@
+<h2><%= list_title %></h2>
+<ul>
+	<% gem_list.each do |ogk, ogv| %>
+		<li><%= link_to ogk, ogv, :target => '_blank' %></li>
+	<% end %>
+</ul>

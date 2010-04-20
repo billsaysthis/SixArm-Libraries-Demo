@@ -1,0 +1,14 @@
+<h1><% if @ph %><%= people_list_title(@ph) %><% end %> Staff</h1>
+
+<%# hdr = ['Name','Department','Company','Title','Hire Date','Termination Date','Actions','',''] %>
+<%# rws = @people %>
+<%#= table(:headers => hdr, :rows => rws ) %>
+<table>
+	<%= render :partial => 'shared/staff_list_headings', :locals => {:alumni => !(@company || @department)} %>
+	<%= render :partial => 'people/short_line', :locals => {:people => @people, :deletable => true} %>
+</table>
+
+<br />
+
+<%= link_to 'Add Staffer', new_person_path(:department_id => @department.id), :class => 'button' %>
+<%= link_to 'Cancel', companies_path, :remote => true, :class => 'button canceler' %>

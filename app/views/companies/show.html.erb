@@ -1,0 +1,11 @@
+<h1><%= @company.name %></h1>
+
+<% show_for @company do |c| %>
+  <%= c.attribute :city %>
+  <%= c.attribute :state %>
+  <%= c.attribute :incorporation_year %>
+<% end %>
+
+
+<%= link_to 'Edit', edit_company_path(@company), :class => 'button' %> 
+<%= link_to 'Back', companies_path, :class => 'button' %>

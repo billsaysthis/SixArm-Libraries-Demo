@@ -1,0 +1,10 @@
+<tr class="<%= cycle("even", "odd") -%>">
+	<td><%= link_to department.name, edit_department_path(department), :title => 'Edit' %></td>
+	<td><%= department.manager.full_name %></td>
+	<td class="">
+		<%= link_to 'Staffers', people_path(:department_id => department), :remote => true, :class => 'staffers-link' %>
+		<% if department.people.count == 0 %>
+			<%= link_to 'X', department, :confirm => 'Are you sure?', :method => :delete, :title => 'Delete' %>
+		<% end %>
+	</td>
+</tr>

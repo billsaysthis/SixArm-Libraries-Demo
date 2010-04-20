@@ -1,0 +1,25 @@
+<h1><%= @department.name %></h1>
+<% show_for @department do |d| %>
+	<%= d.association :manager, :using => :full_name %>
+	<% d.association :people, :label => 'Staffers', :label_tag => 'h2' do |person| %>
+		<li>
+			<span class='actions'>
+				<%= link_to('E', edit_person_path(person), :title => 'Edit') %>
+				<% if deletable %>
+					<%= link_to 'X', terminate_person_path(person), :confirm => 'Terminate this staffer?', :title => 'Terminate this staffer?' %>
+					<% end %>
+			</span>
+			<span><%= link_to(person.list_name, person) %></span>
+			<span><%= person.title %></span>
+			<span><%= person.phone %></span>
+			<span><%= number_to_currency(person.salary, :precision => 0) %></span>
+			<span><%= person.hired %></span>
+			<% if person.terminated %>
+		  	<span><%= person.terminated %></span>
+			<% end %>
+		</li>
+	<% end %>
+<% end %>
+
+<%= link_to 'Edit', edit_department_path(@department), :class => 'button' %> 
+<%= link_to 'Back', departments_path, :class => 'button' %>

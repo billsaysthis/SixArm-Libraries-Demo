@@ -1,0 +1,21 @@
+<h1>About This Demo</h1>
+<div id='company-wrapper'>
+	<div class='top-matter'>
+		<%= render :partial => 'about_demo' %>
+	</div>
+	<div id='primary'>
+		<h2>About SixArm</h2>
+		<%= render :partial => 'sixarm_toolbar' %>
+		<%= render :partial => 'sixarm_benefits' %>
+	</div>
+	<div id='secondary'>
+		<div>
+			<%= render :partial => 'gems_list', :locals => {:list_title => 'SixArm Gems', :gem_list => GEMLISTS[:sixarm_gems]} %>
+			<%= render :partial => 'gems_list', :locals => {:list_title => 'JavaScript Libs', :gem_list => GEMLISTS[:js_libs]} %>
+		</div>
+		<div class='last'>
+			<%= render :partial => 'gems_list', :locals => {:list_title => 'All Envs Gems', :gem_list => GEMLISTS[:all_other_gems]} %>
+			<%= render :partial => 'gems_list', :locals => {:list_title => 'Test Gems', :gem_list => GEMLISTS[:test_other_gems]} %>
+		</div>
+	</div>
+</div>

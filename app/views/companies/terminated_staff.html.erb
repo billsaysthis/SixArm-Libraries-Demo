@@ -1,0 +1,7 @@
+<h1><%= @company %> Alumni</h1>
+
+<table>
+	<%= render :partial => 'shared/staff_list_headings', :locals => {:alumni => true} %>
+	<%= render :partial => 'people/short_line', :locals => {:people => @terminated, :deletable => false} %>
+</table>
+

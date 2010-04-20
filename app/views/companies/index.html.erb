@@ -1,0 +1,21 @@
+<div id='company-wrapper'>
+	<div id='primary'>
+		<h1><%= link_to @company.name, edit_company_path(@company), :remote => true, :class => 'remoter', :title => 'Edit' %></h1>
+		<%= render :partial => 'company_toolbar' %>
+		<div class='company-data' id='<%= @company.name %>'>
+			<p>Headquartered in <strong><span id='<%= @company.city %>' class='company-city'><%= @company.city %></span>, <span id='<%= @company.state %>' class='company-state'><%= @company.state %></span></strong> (<%= link_to 'Map', map_company_path(@company), :remote => true, :class => 'remoteMap' %>)</p>
+			<p>Incorporated in <strong><%= @company.incorporation_year %></strong></p>
+			<p><strong>Staff favorite colors</strong> are <%= fav_colors_list(@company) %></p>
+		</div>
+		
+		<%= render :partial => 'departments', :locals => {:departments => @departments} %>
+		<br />
+
+		<%= link_to 'Add Department', new_department_path(:id => @company.id), :remote => true, :class => 'big button remoter' %>
+
+		<%# link_to 'Add Company', new_company_path, :class => 'button' %>
+	</div>
+	<div id='secondary'>
+		<%= render :partial => 'shared/sixarm_about' %>
+	</div>
+</div>

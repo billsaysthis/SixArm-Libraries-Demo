@@ -1,0 +1,8 @@
+<tr>
+  <td><%= link_to company.name, edit_company_path(company), :title => 'Edit' %> <%# link_to 'X', company, :confirm => 'Are you sure?', :method => :delete, :title => 'Delete' %></td>
+  <td><%= company.city %>, <%= company.state %></td>
+  <td><%= company.incorporation_year %></td>
+  <!-- <td><%# link_to 'Departments', structure_company_path(company) %></td> -->
+  <td><%= link_to 'Alumni', terminated_staff_company_path(company), :class => 'button' %></td>
+	<td><%= link_to 'Manage Titles', titles_path, :class => 'button' %></td>
+</tr>

@@ -1,0 +1,10 @@
+<div id='people-search' class='right-banner'>
+	<% form_for :search, @search, :url => search_people_path, :html => {:method => :get} do |f| %>
+	
+  <%# form_for :person, @search_person, :url => {:controller => :person, :action => :search} do |f| %>
+    <%= f.label :plain_fullname_contains, 'Find Staffer' %>
+    <%= f.text_field :plain_fullname_contains, :size => 20 %> 
+    <%= f.submit 'Search' %>
+		<%= link_to 'Manage Titles', titles_path, :class => 'button', :id => 'manage-titles-link' %>
+  <% end %>
+</div>

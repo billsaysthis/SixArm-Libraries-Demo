@@ -1,0 +1,84 @@
+body { background-color: #B6785E; color: #333; margin: 0; padding: 0;}
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif !important;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+th {text-align: left;}
+th, td {padding-right: 6px;}
+pre {background-color: #eee;padding: 10px;font-size: 11px;}
+
+img {border: none;}
+a.image:hover {background-color: inherit;}
+
+a { color: #5B74A8; }
+a:visited { color: #5B74A8; }
+a:hover, .actions a:hover, .toolbar a:hover { color: #fff; background-color:#000; }
+
+h1, h1 a, h1 a:visited, h2, h3 {color:#662000;}
+h1 a {text-decoration: none;}
+
+#wrap {width: 960px; margin: 0 auto; background-color:#FFF; border: 1px solid #210000; border-top: none;}
+
+#banner {background-color:#80B7E3; border-bottom: 1px solid #210000;}
+#banner, #content {padding: 10px;}
+#footer {background-color:#80B7E3; border-top: 1px solid #210000; color:#662000; font-size: 116%; padding: 10px 0px; text-align: center;}
+#footer a {text-decoration: none;}
+
+.two_col .field {overflow: auto;}
+.field > div {float: left;}
+.field > div.label {clear: both; width: 150px;}
+.field > div.input {width: 350px;}
+.two_col .actions {text-align: right; width: 600px; margin-top: 20px;}
+div.field, div.actions {margin-bottom: 10px;}
+
+#wrap label {font-weight: bold;}
+
+.clearer {clear: both;}
+
+.notice {color: green;}
+.fieldWithErrors {padding: 2px; background-color: red; display: table;}
+#errorExplanation {width: 400px; border: 2px solid red; padding: 7px; padding-bottom: 12px; margin-bottom: 20px; background-color: #f0f0f0;}
+#errorExplanation h2 {text-align: left; font-weight: bold; padding: 5px 5px 5px 15px; font-size: 12px; margin: -7px; background-color: #c00; color: #fff;}
+#errorExplanation p {color: #333; margin-bottom: 0; padding: 5px;}
+#errorExplanation ul li {font-size: 12px; list-style: square;}
+.error span {border: 2px solid #ff0000; background-color: yellow; color: #210000; font-size: 146%; text-align: center; padding: 4px;}
+
+.actions input, .button {text-decoration: none; padding: 2px; width: 120px; display: inline-block; text-align: center;}
+.big.button {padding: 4px 8px; width: auto; font-size: 120%;}
+a.button, a.button:visited {color: #fff;}
+.odd {background-color:#e4e4e4;}
+td.actions {width: 36px; padding: 2px;}
+.actions a {padding: 2px; text-decoration: none;}
+a.canceler {background-color:#eeeeee !important; color:#000 !important; font-size: 11px; width: 50px;}
+.toolbar {border: 2px solid #210000; padding: 5px; padding-bottom: 7px; background-color: #80B7E3; width: 370px; text-align: center;}
+.toolbar a {text-decoration: none; padding-right: 5px; padding-left: 5px; padding-bottom: 2px; margin-right: 20px;}
+.toolbar a.last {margin-right: 0px;}
+
+.actions a, .actions input, .button, .toolbar a {background-color:#5B74A8; color: #fff; border: 1px solid; border-color: #29447E #29447E #1A356E;}
+
+.show_for h2 {margin-bottom: -20px;}
+
+.right-banner {float: right; width: 450px; text-align: right; font-weight: bold; }
+#manage-titles-link {padding: 0 2px 2px; font-weight: normal; width: 100px; margin-left: 28px;}
+#people-search label {margin-right: 10px;}
+#people-search input[type='submit'] {font-weight: bold; background-color:#e4e4e4; padding: 2px;}
+#six-arm-links {clear: both; border-top: 1px solid #210000; margin-top: 10px; padding-top:6px;}
+#six-arm-links a {text-decoration: none; color: #B6785E;}
+.sixarm-ad-links {text-align: center; font-size: 136%; line-height: 1.2;}
+
+#company-wrapper {overflow: auto;}
+#company-wrapper > div, #page-about #secondary > div {float: left; overflow: visible;}
+#primary {width: 400px; margin-right: 10px; border-right: 1px solid #210000;}
+#secondary {width: 500px;}
+#secondary table {width: 100%;}
+#page-about #secondary > div {width: 42%;}
+#page-about #secondary > div.last { margin-left: 10px; padding-left: 10px; border-left: 1px solid #210000;}
+#page-about h2 {margin-top: 0;}
+.top-matter {border-bottom: 2px solid #210000; margin-bottom: 20px;}
+
+.company-data {border: 3px solid #210000; padding: 2px 5px; width: 370px;}
+
+#map {height: 500px;}

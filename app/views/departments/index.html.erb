@@ -1,0 +1,14 @@
+<h1><%= @company %> Departments</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Manager</th>
+    <th></th>
+  </tr>
+
+	<%= render :partial => 'departments/department', :collection => @departments %>
+</table>
+<br />
+
+<%= link_to 'Add Department', new_department_path(:id => @company.id), :class => 'big button' %>

@@ -1,0 +1,16 @@
+<tr class="<%= cycle("even", "odd") -%>">
+  <td class="actions">
+		<%= link_to 'E', edit_person_path(person), :title => 'Edit' %> 
+		<% if deletable %>
+			<%= link_to 'T', terminate_person_path(person), :confirm => 'Terminate this staffer?', :title => 'Terminate this staffer?' %>
+		<% end %>
+	</td>
+  <td><%= link_to person.short_list_name, person %></td>
+  <td><%= person.title %></td>
+  <td><%= phone_as_extension(person) %></td>
+  <td><%= salary_str(person) %></td>
+  <td style='width: 13%;'><%= hired(person,'short') %></td>
+	<% if person.terminated %>
+  	<td><%= person.terminated %></td>
+	<% end %>
+</tr>

@@ -1,0 +1,21 @@
+<h1><%= @person.full_name %></h1>
+<p><%= link_to 'Edit', edit_person_path(@person), :class => 'big button' %></p>
+<% show_for @person do |p| %>
+	<%= p.association :title %>
+	<% p.association :department do %>
+		<%= link_to @person.department, department_path(@person.department) %> 
+		(<%= link_to 'Department Staffers', :controller => :people, :action => :index, :company_id => @person.company, :department_id => @person.department, :q => 1 %>)
+	<% end %>
+	<%= p.association :company %>
+	<%= p.attribute :phone %>
+	<% p.attribute :salary do %>
+  	<%= number_to_currency(@person.salary, :precision => 0) %>
+	<% end %>
+	<%= p.attribute :favorite_color %>
+	<%= p.label :hired %><br/>
+	<%= hired(@person, 'db') %>
+	<% if @person.terminated_on %>
+		<%= p.attribute :terminated %>
+	<% end %>
+<% end %>
+

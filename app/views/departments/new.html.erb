@@ -1,0 +1,6 @@
+<% if @department.company %>
+	<h1>New Department in <%= @department.company %></h1>
+<% else %>
+	<h1>New Department</h1>
+<% end %>
+<%= render 'form' %>
