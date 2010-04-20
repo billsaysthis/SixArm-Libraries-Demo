@@ -1,5 +1,5 @@
 # for getting password
-require 'webget_ruby_password_text'
+require 'sixarm_ruby_password_text'
 
 class Person < ActiveRecord::Base
   belongs_to :company
@@ -24,7 +24,7 @@ class Person < ActiveRecord::Base
   include PersonName
   # for list_name, full_name functions
 
-  # generate a secure password from webget_ruby_password_text
+  # generate a secure password from sixarm_ruby_password_text
   before_create {|person| person.password = PasswordText.new(16)}
   # store a plain (unaccented) version of the fullname for search
   before_save {|person| person.plain_fullname = person.full_name.unaccent}

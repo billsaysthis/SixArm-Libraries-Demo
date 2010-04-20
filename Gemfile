@@ -11,14 +11,14 @@ gem "show_for"
 gem "hirb"
 # gem "meta_search"
 
-## Webget gems:
-gem "webget_ruby_colorful"
-gem "webget_ruby_html"
-gem "webget_ruby_password_text"
-gem "webget_ruby_person_name"
-gem "webget_ruby_spreadsheeting"
-gem "webget_ruby_unaccent"
-gem "webget_ruby_hash_more"
+## Sixarm gems:
+gem "sixarm_ruby_colorful"
+gem "sixarm_ruby_html"
+gem "sixarm_ruby_password_text"
+gem "sixarm_ruby_person_name"
+gem "sixarm_ruby_spreadsheeting"
+gem "sixarm_ruby_unaccent"
+gem "sixarm_ruby_hash_more"
 
 ## Bundle gems used only in certain environments:
 

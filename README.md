@@ -4,12 +4,12 @@ Welcome to WebGet/SixArm Demo App
 WebGet/SixArm gems used are:
 -
 
-* Colorful: [http://github.com/webget/webget_ruby_colorful](http://github.com/webget/webget_ruby_colorful)
-* HTML: [http://github.com/webget/webget_ruby_html](http://github.com/webget/webget_ruby_html)
-* PasswordText: [http://github.com/webget/webget_ruby_password_text](http://github.com/webget/webget_ruby_password_text)
-* PersonName: [http://github.com/webget/webget_ruby_person_name](http://github.com/webget/webget_ruby_person_name)
-* SpreadsheetHelpers: [http://github.com/webget/webget_ruby_spreadsheeting](http://github.com/webget/webget_ruby_spreadsheeting)
-* Unaccent: [http://github.com/webget/webget_ruby_unaccent](http://github.com/webget/webget_ruby_unaccent)
+* Colorful: [http://github.com/sixarm/sixarm_ruby_colorful](http://github.com/sixarm/sixarm_ruby_colorful)
+* HTML: [http://github.com/sixarm/sixarm_ruby_html](http://github.com/sixarm/sixarm_ruby_html)
+* PasswordText: [http://github.com/sixarm/sixarm_ruby_password_text](http://github.com/sixarm/sixarm_ruby_password_text)
+* PersonName: [http://github.com/sixarm/sixarm_ruby_person_name](http://github.com/sixarm/sixarm_ruby_person_name)
+* SpreadsheetHelpers: [http://github.com/sixarm/sixarm_ruby_spreadsheeting](http://github.com/sixarm/sixarm_ruby_spreadsheeting)
+* Unaccent: [http://github.com/sixarm/sixarm_ruby_unaccent](http://github.com/sixarm/sixarm_ruby_unaccent)
 
 All Other Gems:
 -
