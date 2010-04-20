@@ -1,9 +1,0 @@
-
-= WebGet Ruby Gem: Spreadsheeting import & export helpers
-
-Author:: Joel Parker Henderson, joelparkerhenderson@gmail.com
-Copyright:: Copyright (c) 2006-2010 Joel Parker Henderson
-License:: CreativeCommons License, Non-commercial Share Alike
-License:: LGPL, GNU Lesser General Public License
-
-Fusion key: A0M2R-72E46-K2V7Q-2N3K2
