@@ -12,7 +12,7 @@ class PeopleController < ApplicationController
     # active people for a department
     elsif params[:department_id]
       @department = Department.find(params[:department_id])
-      @people = @department.people.active
+      @people = @department.people.active.order(:title_id)
       @ph = {:department => @department.name}
       xh = false
     # all active people

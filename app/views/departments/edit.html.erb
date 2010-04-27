@@ -1,3 +1,5 @@
 <h1>Editing <%= @department %></h1>
 
-<%= render 'form' %>
+<%= form_for @department do |form| %>
+	<%= render form %>
+<% end %>

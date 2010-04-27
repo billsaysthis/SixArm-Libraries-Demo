@@ -1,4 +1,4 @@
-Wgd1::Application.configure do
+Sldemo::Application.configure do
   config.generators do |g|
     g.integration_tool :rspec
     g.test_framework   :rspec

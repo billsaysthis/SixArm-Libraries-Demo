@@ -1,5 +1,5 @@
 # for getting password
-require 'sixarm_ruby_password_text'
+require 'webget_ruby_password_text'
 
 class Person < ActiveRecord::Base
   belongs_to :company

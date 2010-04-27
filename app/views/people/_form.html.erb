@@ -1,53 +1,51 @@
-<% form_for @person, :html => {:class => 'two_col'} do |f| %>
-	<%= f.error_messages %>
+<%= form.error_messages %>
 
-	<div class="field">
-		<div class='label'><%= f.label :first_name %></div>
-		<div class='input'><%= f.text_field :first_name %></div>
-	</div>
-	<div class="field">
-		<div class='label'><%= f.label :middle_name %></div>
-		<div class='input'><%= f.text_field :middle_name %></div>
-	</div>
-	<div class="field">
-		<div class='label'><%= f.label :last_name %></div>
-		<div class='input'><%= f.text_field :last_name %></div>
-	</div>
-	<div class="field">
-		<div class='label'><%= f.label :phone %></div>
-		<div class='input'><%= f.text_field :phone %></div>
-	</div>
-	<div class="field">
-		<div class='label'><%= f.label :salary %></div>
-		<div class='input'><%= f.text_field :salary %></div>
-	</div>
-	<div class="field">
-		<div class='label'><%= f.label :favorite_color %></div>
-		<div class='input'><%= f.select :favorite_color, Colorful.colors, {:include_blank => true} %></div>
-	</div>
-	<div class="field">
-		<div class='label'><%= f.label :department_id %></div>
-		<div class='input'><%= f.select :department_id, options_from_collection_for_select(@person.company.departments, 'id', 'name', @person.department_id) %></div>
-	</div>
-	<div class="field">
-		<div class='label'><%= f.label :company_id %></div>
-		<div class='input'><%= f.select :company_id, Company.all.collect {|p| [ p.name, p.id ] } %></div>
-	</div>
-	<div class="field">
-		<div class='label'><%= f.label :title_id %></div>
-		<div class='input'><%= f.select :title_id, Title.all.collect {|p| [ p.title, p.id ] } %></div>
-	</div>
-	<div class="field">
-		<div class='label'><%= f.label :hired_on, 'Hired' %></div>
-		<div class='input'><%= f.datetime_select :hired_on %></div>
-	</div>
-	<% if !@person.new_record? %>
-	<div class="field">
-		<div class='label'><%= f.label :terminated_on, 'Terminated' %></div>
-		<div class='input'><%= f.datetime_select :terminated_on, :start_year => @person.company.incorporation_year.to_i, :include_blank => true %></div>
-	</div>
-	<% end %>
-	<div class="actions clearer">
-		<%= f.submit %> <%= link_to 'Cancel', companies_path, :class => 'canceler' %>
-	</div>
+<div class="field">
+	<div class='label'><%= form.label :first_name %></div>
+	<div class='input'><%= form.text_field :first_name %></div>
+</div>
+<div class="field">
+	<div class='label'><%= form.label :middle_name %></div>
+	<div class='input'><%= form.text_field :middle_name %></div>
+</div>
+<div class="field">
+	<div class='label'><%= form.label :last_name %></div>
+	<div class='input'><%= form.text_field :last_name %></div>
+</div>
+<div class="field">
+	<div class='label'><%= form.label :phone %></div>
+	<div class='input'><%= form.text_field :phone %></div>
+</div>
+<div class="field">
+	<div class='label'><%= form.label :salary %></div>
+	<div class='input'><%= form.text_field :salary %></div>
+</div>
+<div class="field">
+	<div class='label'><%= form.label :favorite_color %></div>
+	<div class='input'><%= form.select :favorite_color, Colorful.colors, {:include_blank => true} %></div>
+</div>
+<div class="field">
+	<div class='label'><%= form.label :department_id %></div>
+	<div class='input'><%= form.select :department_id, options_from_collection_for_select(@person.company.departments, 'id', 'name', @person.department_id) %></div>
+</div>
+<div class="field">
+	<div class='label'><%= form.label :company_id %></div>
+	<div class='input'><%= form.select :company_id, Company.all.collect {|p| [ p.name, p.id ] } %></div>
+</div>
+<div class="field">
+	<div class='label'><%= form.label :title_id %></div>
+	<div class='input'><%= form.select :title_id, Title.all.collect {|p| [ p.title, p.id ] } %></div>
+</div>
+<div class="field">
+	<div class='label'><%= form.label :hired_on, 'Hired' %></div>
+	<div class='input'><%= form.datetime_select :hired_on %></div>
+</div>
+<% if !@person.new_record? %>
+<div class="field">
+	<div class='label'><%= form.label :terminated_on, 'Terminated' %></div>
+	<div class='input'><%= form.datetime_select :terminated_on, :start_year => @person.company.incorporation_year.to_i, :include_blank => true %></div>
+</div>
 <% end %>
+<div class="actions clearer">
+	<%= form.submit %> <%= link_to 'Cancel', companies_path, :class => 'canceler' %>
+</div>

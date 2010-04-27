@@ -1,3 +1,5 @@
 <h1>Editing <%= @person.full_name %></h1>
 
-<%= render 'form' %>
+<%= form_for @person do |form| %>
+	<%= render form %>
+<% end %>

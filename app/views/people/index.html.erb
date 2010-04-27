@@ -4,8 +4,8 @@
 <%# rws = @people %>
 <%#= table(:headers => hdr, :rows => rws ) %>
 <table>
-	<%= render :partial => 'shared/staff_list_headings', :locals => {:alumni => !(@company || @department)} %>
-	<%= render :partial => 'people/short_line', :locals => {:people => @people, :deletable => true} %>
+	<%= render :partial => 'shared/staff_list_headings', :locals => {:alumni => !(@company || @department), :show_phone => true} %>
+	<%= render :partial => 'people/short_line', :locals => {:people => @people, :deletable => true, :show_phone => false} %>
 </table>
 
 <br />

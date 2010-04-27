@@ -2,25 +2,29 @@
 source 'http://gemcutter.org'
 
 
-gem "rails", :path => '~/Sites/rails'
+gem "rails", '3.0.0.beta3'
 
 # ActiveRecord requires a database adapter. By default,
 # Rails has selected sqlite3.
 gem "sqlite3-ruby", :require => "sqlite3"
 gem "show_for"
-gem "hirb"
 # gem "meta_search"
 
 ## Sixarm gems:
-gem "sixarm_ruby_colorful"
-gem "sixarm_ruby_html"
-gem "sixarm_ruby_password_text"
-gem "sixarm_ruby_person_name"
-gem "sixarm_ruby_spreadsheeting"
-gem "sixarm_ruby_unaccent"
-gem "sixarm_ruby_hash_more"
+gem "webget_ruby_colorful"
+gem "webget_ruby_html"
+gem "webget_ruby_password_text"
+gem "webget_ruby_person_name"
+gem "webget_ruby_spreadsheeting"
+gem "webget_ruby_unaccent"
+gem "webget_ruby_hash_more"
 
 ## Bundle gems used only in certain environments:
+
+group :development do
+	gem "hirb"
+	# gem "hermes"
+end
 
 group :test do
 	gem "rspec-rails", ">= 2.0.0.beta.1"

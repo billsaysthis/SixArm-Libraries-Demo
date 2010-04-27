@@ -11,9 +11,9 @@
 		<%= render :partial => 'departments', :locals => {:departments => @departments} %>
 		<br />
 
-		<%= link_to 'Add Department', new_department_path(:id => @company.id), :remote => true, :class => 'big button remoter' %>
+		<%= link_to 'Add Department', new_department_path(:id => @company.id), :remote => true, :class => 'awesome medium blue button remoter' %>
 
-		<%# link_to 'Add Company', new_company_path, :class => 'button' %>
+		<%# link_to 'Add Company', new_company_path, :class => '' %>
 	</div>
 	<div id='secondary'>
 		<%= render :partial => 'shared/sixarm_about' %>

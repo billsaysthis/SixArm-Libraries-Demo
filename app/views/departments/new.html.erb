@@ -3,4 +3,7 @@
 <% else %>
 	<h1>New Department</h1>
 <% end %>
-<%= render 'form' %>
+
+<%= form_for Department.new do |form| %>
+	<%= render form %>
+<% end %>

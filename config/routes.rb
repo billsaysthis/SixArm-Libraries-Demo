@@ -1,4 +1,4 @@
-Wgd1::Application.routes.draw do |map|
+Sldemo::Application.routes.draw do |map|
   resources :titles
 
   resources :companies, :shallow => true do

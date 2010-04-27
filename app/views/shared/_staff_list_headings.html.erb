@@ -1,11 +1,13 @@
 <tr>
-  <th></th>
-  <th>Name</th>
-  <th>Title</th>
-  <th>Phone</th>
-  <th>Salary</th>
-  <th>Hired</th>
+	<th id='actions-title'></th>
+	<th>Name</th>
+	<th>Title</th>
+	<% if show_phone %>
+		<th>Phone</th>
+	<% end %>
+	<th>Salary</th>
+	<th>Hired</th>
 	<% if alumni %>
-  	<th>Termination Date</th>
+		<th>Terminated</th>
 	<% end %>
 </tr>
