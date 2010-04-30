@@ -2,8 +2,7 @@ class Company < ActiveRecord::Base
   has_many :departments
   has_many :people
   
-  validates_presence_of :name
-  validates_uniqueness_of :name
+  validates :name, :presence => true, :uniqueness => true
   validates_length_of :name, :minimum => 8
   validates_presence_of :city
   validates_presence_of :state

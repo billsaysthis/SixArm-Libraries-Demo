@@ -3,10 +3,8 @@ class Department < ActiveRecord::Base
   has_many :people
   has_one :manager, :class_name => "Person"
   
-  validates_presence_of :name
-  validates_uniqueness_of :name
-  validates_presence_of :company
-  validates_associated :company
+  validates :name, :presence => true, :uniqueness => true
+  validates :company, :presence => true, :associated => true
   
   def to_s
     self.name

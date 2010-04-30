@@ -40,7 +40,7 @@ class CompaniesController < ApplicationController
   def terminated_staff
     @terminated = @company.people.terminated
     respond_to do |format|
-      format.html
+      format.html { render :layout => false }
       format.xml  { render :xml => @terminated }
     end
   end

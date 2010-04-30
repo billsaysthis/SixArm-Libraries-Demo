@@ -15,14 +15,14 @@ a.image:hover {background-color: inherit;}
 
 a { color: #5B74A8; }
 a:visited { color: #5B74A8; }
-a:hover, .actions a:hover, .toolbar a:hover { color: #fff; background-color:#000; }
+a:hover, .actions a:hover, .toolbar a:hover { color: #fff; background-color:#82B8E4; text-decoration: none;}
 
 h1, h1 a, h1 a:visited, h2, h3 {color:#662000;}
 h1 a {text-decoration: none;}
 
 #wrap {width: 960px; margin: 0 auto; background-color:#FFF; border: 1px solid #210000; border-top: none;}
 
-#banner {background-color:#80B7E3; border-bottom: 1px solid #210000;}
+#banner {background-color:#fff; border-top: 6px solid #82B8E4; border-bottom: 6px solid #82B8E4;}
 #banner img {vertical-align: text-top;}
 #banner h1 {margin: 0;}
 #banner, #content {padding: 10px;}
@@ -54,7 +54,7 @@ a.button, a.button:visited {color: #fff;} */
 .odd {background-color:#e4e4e4;}
 td.actions {padding: 2px;}
 .actions a {padding: 2px; text-decoration: none;}
-a.canceler {background-color:#eeeeee !important; color:#000 !important; font-size: 11px; width: 50px;}
+a.canceler {background-color:#eeeeee !important; color:#fff !important; font-size: 11px; width: 50px;}
 .toolbar {border: 2px solid #210000; padding: 5px; padding-bottom: 7px; background-color: #80B7E3; width: 370px; text-align: center;}
 .toolbar a {margin-right: 20px;}
 .toolbar a.last {margin-right: 0px;}
@@ -63,7 +63,7 @@ a.canceler {background-color:#eeeeee !important; color:#000 !important; font-siz
 
 .show_for h2 {margin-bottom: -20px;}
 
-.right-banner {float: right; width: 450px; text-align: right; font-weight: bold; }
+.right-banner {float: right; width: 410px; text-align: right; font-weight: bold; }
 #manage-titles-link {padding: 0 2px 2px; font-weight: normal; margin-left: 28px;}
 #people-search label {margin-right: 10px;}
 #people-search input[type='submit'] {font-weight: bold; background-color:#e4e4e4; padding: 2px;}

@@ -1,5 +1,5 @@
 <p class='toolbar'>
-	<%= link_to 'Alumni List', terminated_staff_company_path(@company), :class => 'first awesome small blue button' %>
+	<%= link_to 'Alumni List', terminated_staff_company_path(@company), :remote => true, :class => 'remoter first awesome small blue button' %>
 	<%= link_to 'Import Staffers', import_staff_company_path(@company), :remote => true, :class => 'remoter awesome small blue button', :title => 'Coming Soon' %>
 	<%= link_to 'Export Staffers', export_staff_company_path(@company), :remote => true, :class => 'last remoter awesome small blue button', :title => 'Coming Soon' %>
 </p>

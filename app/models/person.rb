@@ -6,12 +6,9 @@ class Person < ActiveRecord::Base
   belongs_to :department
   belongs_to :title
   
-  validates_presence_of :company
-  validates_associated :company
-  validates_presence_of :department
-  validates_associated :department
-  validates_presence_of :title
-  validates_associated :title
+  validates :company, :presence => true, :associated => true
+  validates :department, :presence => true, :associated => true
+  validates :title, :presence => true, :associated => true
   
   validates_presence_of :last_name
   validates_presence_of :first_name
