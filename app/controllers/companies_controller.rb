@@ -31,6 +31,7 @@ class CompaniesController < ApplicationController
   end
   
   def export_staff
+    @exp = @company.to_csv
     respond_to do |format|
       format.html { render :layout => false }
       format.xml  { render :xml => @company }

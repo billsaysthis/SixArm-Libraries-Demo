@@ -2,10 +2,10 @@
 <html>
 	<head>
 	  <title>SixArm Libraries Demo : <%= controller.controller_name %> : <%= controller.action_name %></title>
-	  <%= stylesheet_link_tag 'awesome-buttons', 'scaffold' %>
+	  <%= stylesheet_link_tag 'awesome-buttons', 'jquery.notifyBar', 'scaffold' %>
 		<%= javascript_include_tag 'http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAJ3s9my6L9bUKzmTYsD_18hT2yXp_ZAY8_ufC3CFXhHIE1NvwkxRyPvdrE-rpVpQWUWoAIDjI2ELlfw' %>
 		<%= javascript_include_tag "jquery-1.4.2" %>
-	  <%= javascript_include_tag 'DD_roundies_0.0.2a-min', 'rails', 'jquery.gmap-1.0.4-min', 'application' %>
+	  <%= javascript_include_tag 'DD_roundies_0.0.2a-min', 'rails', 'jquery.notifyBar', 'jquery.gmap-1.0.4-min', 'application' %>
 	  <%= csrf_meta_tag %>
 	</head>
 	<body id='<%= controller.controller_name %>-<%= controller.action_name %>'>
@@ -13,12 +13,7 @@
 			<%= render :partial => "shared/banner" %>
 			
 			<div id='content'>
-				<% if flash[:notice] -%>
-					<p class="notice"><span><%= flash[:notice] %></span></p>
-				<% end -%>
-				<% if flash[:error] -%>
-					<p class="error"><span><%= flash[:error] %></span></p>
-				<% end -%> 
+				<%= notify_bar :flash => [:notice, :success], :delay => 4000 %>
 				<%= yield %>
 			</div>
 

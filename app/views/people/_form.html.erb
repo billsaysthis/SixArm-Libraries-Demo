@@ -1,4 +1,4 @@
-<% if error_messages_for form %>
+<% if not :errors.nil? %>
 <%= render "shared/error_messages", :target => form %>
 <% end %>
 <div class="field">
@@ -23,7 +23,7 @@
 </div>
 <div class="field">
 	<div class='label'><%= form.label :favorite_color %></div>
-	<div class='input'><%= form.select :favorite_color, Colorful.colors, {:include_blank => true} %></div>
+	<div class='input'><%= form.select :favorite_color, Colorful.choice, {:include_blank => true} %></div>
 </div>
 <div class="field">
 	<div class='label'><%= form.label :department_id %></div>

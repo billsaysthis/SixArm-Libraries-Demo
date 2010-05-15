@@ -9,11 +9,11 @@ class Person < ActiveRecord::Base
   validates :company, :presence => true, :associated => true
   validates :department, :presence => true, :associated => true
   validates :title, :presence => true, :associated => true
+  validates :first_name, :presence => true, :length => { :minimum => 2 }
+  validates :last_name, :presence => true, :length => { :minimum => 2 }
   
-  validates_presence_of :last_name
-  validates_presence_of :first_name
-  validates_presence_of :hired_on
-  validates_presence_of :salary, :minimum => 30000
+  validates :hired_on, :presence => true
+  validates :salary, :presence => true, :length => { :minimum => 30000 }
   
   scope :active, where("terminated_on IS NULL")
   scope :terminated, where("terminated_on IS NOT NULL")
@@ -25,7 +25,13 @@ class Person < ActiveRecord::Base
   before_create {|person| person.password = PasswordText.new(16)}
   # store a plain (unaccented) version of the fullname for search
   before_save {|person| person.plain_fullname = person.full_name.unaccent}
+
+  attr_reader :errors
   
+  def initialize
+    @errors = ActiveModel::Errors.new(self)
+  end
+    
   # easy stringified version of terminated_on
   def terminated
     self.terminated_on.nil? ? '' : self.terminated_on.to_date.to_formatted_s(:db)

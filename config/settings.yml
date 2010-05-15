@@ -10,9 +10,10 @@ gemlists:
   all_other_gems:
     - Rails 3: http://rubyonrails.com
     - Sqlite3-ruby: http://github.com/jamis/sqlite3-ruby
-    - ShowFor: http://github.com/plataformatec/show_for
-    - hirb: http://github.com/cldwalker/hirb
-    - MetaSearch: http://github.com/ernie/meta_search
+    - Platformatec's ShowFor: http://github.com/plataformatec/show_for
+    - Gabriel Horner's hirb: http://github.com/cldwalker/hirb
+    - Ernie Miller's MetaSearch: http://github.com/ernie/meta_search
+    - İzzet Emre Kutlu's NotifyBar: http://github.com/xasedy/notify_bar
   test_other_gems:
     - Rspec-rails 2.0 beta: http://github.com/dchelimsky/rspec-rails
     - Faker: http://faker.rubyforge.org/
@@ -25,3 +26,4 @@ gemlists:
     - jQuery: http://jquery.com
     - DD_roundies: http://www.dillerdesign.com/experiment/DD_roundies/
     - gMap: http://gmap.nurtext.de
+    - NotifyBar: http://www.dmitri.me/misc/notify/

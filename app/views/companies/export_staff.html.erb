@@ -1,5 +1,6 @@
 <h1>Export <%= @company %> Staffers</h1>
-<%= link_to 'Save as Download', department_path(:id => @company.id), :remote => true, :class => 'big awesome blue button remoter' %>
+<%# link_to 'Save as Download', department_path(:id => @company.id), :remote => true, :class => 'big awesome blue button remoter' %>
+<div id='exp_results' class='<%= @exp[:res] %>'><%= @exp[:msg] %></div>
 <table id='export-list'>
 	<%= render :partial => 'shared/staff_list_headings', :locals => {:alumni => true, :show_phone => false} %>
 	<%= render :partial => 'people/short_line', :locals => {:people => @company.people, :deletable => false, :show_phone => false} %>
