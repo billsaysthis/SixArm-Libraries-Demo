@@ -8,7 +8,7 @@ gem "rails", '3.0.0.beta3'
 # Rails has selected sqlite3.
 gem "sqlite3-ruby", :require => "sqlite3"
 gem "show_for"
-# gem "meta_search"
+gem "meta_search", :git => "git://github.com/ernie/meta_search.git"
 
 ## Sixarm gems:
 gem "webget_ruby_colorful"

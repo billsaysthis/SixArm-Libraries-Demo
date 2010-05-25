@@ -1,5 +1,5 @@
 
-<%# render "shared/error_messages", :target => form %>
+<%= render "shared/error_messages", :target => @company %>
 
 <div class="field">
 	<%= form.label :name %><br />
@@ -18,5 +18,5 @@
 	<%= form.text_field :incorporation_year %>
 </div>
 <div class="actions">
-	<%= form.submit %> <%= link_to 'Cancel', companies_path, :remote => true, :class => 'canceler' %>
+	<%= form.submit :remote => true %> <%= link_to 'Cancel', companies_path, :remote => true, :class => 'canceler' %>
 </div>

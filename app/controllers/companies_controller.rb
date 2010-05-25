@@ -96,6 +96,7 @@ class CompaniesController < ApplicationController
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
+        format.js   { render :action => "edit", :layout => false }
         format.xml  { render :xml => @company.errors, :status => :unprocessable_entity }
       end
     end
